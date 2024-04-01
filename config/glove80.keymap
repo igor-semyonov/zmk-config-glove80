@@ -30,6 +30,19 @@
     };
 
     macros {
+        kvm: kvm_input {
+            compatible = "zmk,behavior-macro-one-param";
+            wait-ms = <30>;
+            tap-ms = <40>;
+            #binding-cells = <1>;
+            bindings
+                = <&kp SLCK>
+                , <&kp SLCK>
+                , <&macro_param_1to1>
+                , <&kp MACRO_PLACEHOLDER>
+                ;
+        };
+
         bt_0: bt_profile_macro_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -114,8 +127,8 @@
             &none             &none               &none           &none           &none           &none                                                                                &none      &none      &none      &none      &none      &none
             &none             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                                      &none      &none      &none      &none      &none      &none
             &bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                      &none      &none      &none      &none      &none      &bootloader
-            &sys_reset        &none               &none           &none           &none           &none           &bt_2     &bt_3     &none            &none     &none     &none       &none      &none      &none      &none      &none      &sys_reset
-            &none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &none     &none     &none                  &none      &none      &none      &none      &none
+            &sys_reset        &none               &none           &none           &none           &none           &bt_2     &bt_3     &none            &none     &kp C_PP     &none       &none      &none      &none      &none      &none      &sys_reset
+            &none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &none     &none     &none                  &kvm N1      &kvm N2      &kvm N3      &kvm N4      &none
             >;
         };
     };
