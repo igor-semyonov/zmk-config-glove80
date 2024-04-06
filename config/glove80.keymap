@@ -28,6 +28,27 @@
 
 / {
     behaviors {
+        hrm:home_row_mod {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <165>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+        };
+        hrl:home_row_layer {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <165>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <125>;
+            bindings = <&mo>, <&kp>;
+        };
+
+
+
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
         // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
         layer_td: tap_dance_0 {
@@ -112,7 +133,7 @@
             &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
             &kp UP        &kp Q    &kp W       &kp F       &kp P       &kp G                                                                      &kp J   &kp L   &kp U       &kp Y       &kp EQUAL       &kp BSLH
             &kp BSPC        &kp A    &kp R       &kp S       &kp T       &kp D                                                                      &kp H   &kp N   &kp E       &kp I       &kp O    &kp MINUS
-            &kp DOWN      &mt LCTRL Z    &mt LGUI X       &mt LALT C       &lt SYMBOLS V       &kp B   &kp BSPC   &sl MAGIC   &kp RETURN  &tog LOWER  &sl MAGIC &mt CAPS &caps_word   &kp K   &lt SYMBOLS M   &mt RALT COMMA   &mt RGUI DOT     &mt RCTRL FSLH    &kp ASTERISK
+            &kp DOWN      &hrm LCTRL Z    &hrm LGUI X       &hrm LALT C       &hml SYMBOLS V       &kp B   &kp BSPC   &sl MAGIC   &kp RETURN  &tog LOWER  &sl MAGIC &mt CAPS &caps_word   &kp K   &hml SYMBOLS M   &hrm RALT COMMA   &hrm RGUI DOT     &hrm RCTRL FSLH    &kp ASTERISK
             &kp GRAVE      &kp LEFT &kp RIGHT     &kp ESC    &kp TAB           &kp SPACE    &kp LSHIFT     &kp DEL   &kp BSPC  &kp RSHIFT   &kp RETURN           &kp COLON  &kp UNDERSCORE    &kp LS(GRAVE)    &kp SINGLE_QUOTE    &kp DOUBLE_QUOTES
             >;
         };
