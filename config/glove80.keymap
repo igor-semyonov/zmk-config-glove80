@@ -96,7 +96,7 @@
         combo_alt_f4 {
             timeout-ms = <100>;
             key-positions = <13 14 23 24>;
-            layers = <0>;
+            layers = <0 1>;
             bindings = <&kp LA(F4)>;
         };
     };
