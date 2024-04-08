@@ -72,7 +72,14 @@
             bindings = <&mo>, <&kp>;
         };
 
-
+        my_caps: my_caps_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp>, <&caps_word>;
+        };
 
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
         // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
@@ -158,7 +165,7 @@
             &tog QWERTY      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
             &kp UP        &kp Q    &kp W       &kp F       &kp P       &kp G                                                                      &kp J   &kp L   &kp U       &kp Y       &kp EQUAL       &kp BSLH
             &kp BSPC        &kp A    &kp R       &kp S       &kp T       &kp D                                                                      &kp H   &kp N   &kp E       &kp I       &kp O    &kp MINUS
-            &kp DOWN      &hrm LCTRL Z    &hrm LGUI X       &hrm LALT C       &hrl SYMBOLS V       &kp B   &kp RETURN   &kp BSPC   &magic MAGIC 0  &tog LOWER  &sl MAGIC &mt CAPS &caps_word   &kp K   &hrl SYMBOLS M   &hrm RALT COMMA   &hrm RGUI DOT     &hrm RCTRL FSLH    &kp ASTERISK
+            &kp DOWN      &hrm LCTRL Z    &hrm LGUI X       &hrm LALT C       &hrl SYMBOLS V       &kp B   &kp RETURN   &kp BSPC   &magic MAGIC 0  &tog LOWER  &sl MAGIC &my_caps CAPS 0   &kp K   &hrl SYMBOLS M   &hrm RALT COMMA   &hrm RGUI DOT     &hrm RCTRL FSLH    &kp ASTERISK
             &kp GRAVE      &kp LEFT &kp RIGHT     &kp ESC    &kp TAB           &kp SPACE    &kp LSHIFT     &kp DEL   &kp BSPC  &kp RSHIFT   &kp RETURN           &kp COLON  &kp UNDERSCORE    &kp LS(GRAVE)    &kp SINGLE_QUOTE    &kp DOUBLE_QUOTES
             >;
         };
