@@ -165,8 +165,8 @@
             &tog QWERTY      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
             &kp UP        &kp Q    &kp W       &kp F       &kp P       &kp G                                                                      &kp J   &kp L   &kp U       &kp Y       &kp EQUAL       &kp BSLH
             &kp BSPC        &kp A    &kp R       &kp S       &kp T       &kp D                                                                      &kp H   &kp N   &kp E       &kp I       &kp O    &kp MINUS
-            &kp DOWN      &hrm LCTRL Z    &hrm LGUI X       &hrm LALT C       &hrl SYMBOLS V       &kp B   &kp RETURN   &kp BSPC   &magic MAGIC 0  &tog LOWER  &sl MAGIC &my_caps CAPS 0   &kp K   &hrl SYMBOLS M   &hrm RALT COMMA   &hrm RGUI DOT     &hrm RCTRL FSLH    &kp ASTERISK
-            &kp GRAVE      &kp LEFT &kp RIGHT     &kp ESC    &kp TAB           &kp SPACE    &kp LSHIFT     &mt LCTRL DEL   &kp BSPC  &kp RSHIFT   &kp RETURN           &kp COLON  &kp UNDERSCORE    &kp LS(GRAVE)    &kp SINGLE_QUOTE    &kp DOUBLE_QUOTES
+            &kp DOWN      &hrm LCTRL Z    &hrm LGUI X       &hrm LALT C       &hrl SYMBOLS V       &kp B   &mt LCTRL RETURN   &mt LALT ESC   &magic MAGIC 0  &tog LOWER  &sl MAGIC  &kp BSPC  &kp K   &hrl SYMBOLS M   &hrm RALT COMMA   &hrm RGUI DOT     &hrm RCTRL FSLH    &kp ASTERISK
+            &kp GRAVE      &kp LEFT &kp RIGHT     &kp ESC    &kp TAB           &kp SPACE    &kp LSHIFT     &mt LGUI DEL   &my_caps CAPS 0  &kp RSHIFT   &kp RETURN           &kp COLON  &kp UNDERSCORE    &kp LS(GRAVE)    &kp SINGLE_QUOTE    &kp DOUBLE_QUOTES
             >;
         };
 
