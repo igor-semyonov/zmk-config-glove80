@@ -203,7 +203,7 @@
             &none             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                                      &none      &none      &none      &none      &none      &none
             &bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                      &none      &none      &none      &none      &none      &bootloader
             &sys_reset        &none               &none           &none           &none           &kp  PSCRN           &bt_2     &bt_3     &none            &kp C_PREV     &kp C_PP     &kp C_NEXT       &none      &none      &none      &none      &none      &sys_reset
-            &none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &kp C_MUTE     &kp C_VOL_DOWN     &kp C_VOL_UP                  &kvm N1      &kvm N2      &kvm N3      &kvm N4      &none
+            &none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &none     &none     &none                  &kvm N1      &kvm N2      &kvm N3      &kvm N4      &none
             >;
         };
     };
