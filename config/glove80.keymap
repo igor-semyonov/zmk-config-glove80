@@ -195,10 +195,10 @@
             bindings = <
             &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-            &trans &trans &trans &trans       &trans       &trans                                                                      &trans   &trans   &mmv MOVE_UP       &trans       &trans    &trans
-            &trans &trans &trans       &trans       &trans       &trans                                                                      &trans &mmv MOVE_LEFT   &mmv MOVE_DOWN       &mmv MOVE_RIGHT       &trans    &trans
-            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans   &trans   &mkp MB1 &msc SCRL_UP &mkp MB2 &trans &trans
-            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &trans &trans
+            &trans &trans &msc SCRL_UP &kp LG(KP_MINUS)       &kp LG(KP_EQUAL)       &trans                                                                      &trans   &trans   &mmv MOVE_UP       &trans       &trans    &trans
+            &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT       &mkp MB1       &trans       &trans                                                                      &trans &mmv MOVE_LEFT   &mmv MOVE_DOWN       &mmv MOVE_RIGHT       &trans    &trans
+            &trans &trans &trans &kp LC(LG(C)) &mkp MB2 &trans &trans &trans &trans &trans &trans &trans   &trans   &trans &trans &trans &trans &trans
+            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
             >;
         };
 
