@@ -11,12 +11,18 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+#include <dt-bindings/zmk/pointing.h>
+
+
 // layers
 #define DEFAULT 0
 #define QWERTY 1
 #define SYMBOLS 2
 //#define LOWER 3
-#define MAGIC 3
+#define MOUSE 3
+#define MAGIC 4
 
 &mt {
     tapping-term-ms = <150>;
@@ -157,7 +163,7 @@
             &kp F12      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7  &kp N8      &kp N9      &kp N0      &kp F11
             &kp GRAVE        &kp Q    &kp W       &kp F       &kp P       &kp G                                                                      &kp J   &kp L   &kp U       &kp Y       &kp EQUAL       &kp SEMI
             &kp BSPC        &kp A    &kp R       &kp S       &kp T       &kp D                                                                      &kp H   &kp N   &kp E       &kp I       &kp O    &kp MINUS
-            &kp UP      &hrm LCTRL Z    &hrm LGUI X       &hrm LALT C       &hrl SYMBOLS V       &kp B   &mt LCTRL RETURN   &mt LALT ESC   &magic MAGIC 0  &kp PSCRN  &sl MAGIC  &kp BSPC  &kp K   &hrl SYMBOLS M   &hrm RALT COMMA   &hrm RGUI DOT     &hrm RCTRL FSLH    &kp ASTERISK
+            &kp UP      &hrm LCTRL Z    &hrm LGUI X       &hrm LALT C       &hrl SYMBOLS V       &kp B   &mt LCTRL RETURN   &mt LALT ESC   &magic MAGIC 0  &kp PSCRN  &sl MAGIC  &hrl MOUSE BSPC  &kp K   &hrl SYMBOLS M   &hrm RALT COMMA   &hrm RGUI DOT     &hrm RCTRL FSLH    &kp ASTERISK
             &kp DOWN      &kp LEFT &kp RIGHT     &kp ESC    &kp TAB           &kp SPACE    &kp LSHIFT     &mt LGUI DEL   &my_caps CAPS 0  &kp RSHIFT   &kp RETURN           &kp COLON  &kp UNDERSCORE    &kp LS(GRAVE)    &kp SINGLE_QUOTE    &kp DOUBLE_QUOTES
             >;
         };
@@ -182,6 +188,17 @@
             &trans &kp HASH    &kp DOLLAR       &kp LPAR       &kp RPAR       &kp AMPERSAND                                                                      &kp SEMICOLON   &kp N4   &kp N5       &kp N6       &kp PLUS    &trans 
             &trans &kp PERCENT    &kp CARET       &kp LBKT       &kp RBKT       &none   &trans &trans &trans &trans &trans &trans &none   &kp N1   &kp N2   &kp N3     &trans &trans 
             &trans &kp HOME    &kp END  &kp PG_DN &kp PG_UP           &trans &trans &trans &trans &trans &trans &kp N0 &kp KP_DOT &kp KP_ENTER &trans &trans
+            >;
+        };
+
+        mouse_layer {
+            bindings = <
+            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+            &trans &trans &trans &trans       &trans       &trans                                                                      &trans   &trans   &mmv MOVE_UP       &trans       &trans    &trans
+            &trans &trans &trans       &trans       &trans       &trans                                                                      &trans &mmv MOVE_LEFT   &mmv MOVE_DOWN       &mmv MOVE_RIGHT       &trans    &trans
+            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans   &trans   &mkp MB1 &msc SCRL_UP &mkp MB2 &trans &trans
+            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &trans &trans
             >;
         };
 
