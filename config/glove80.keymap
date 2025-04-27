@@ -14,6 +14,7 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 16    // default: 10
 #include <dt-bindings/zmk/pointing.h>
+#define POINTER_SLOW_SPEED 300
 
 
 // layers
@@ -206,8 +207,8 @@
             bindings = <
             &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-            &trans &trans &trans &trans       &trans       &trans                                                                      &trans   &trans   &mmv MOVE_UP(400)       &trans       &trans    &trans
-            &trans &trans &trans &trans       &trans       &trans                                                                      &trans &mmv MOVE_LEFT(400)   &mmv MOVE_DOWN(400)       &mmv MOVE_RIGHT(400)       &trans    &trans
+            &trans &trans &trans &trans       &trans       &trans                                                                      &trans   &trans   &mmv MOVE_Y(-POINTER_SLOW_SPEED)       &trans       &trans    &trans
+            &trans &trans &trans &trans       &trans       &trans                                                                      &trans &mmv MOVE_X(-POINTER_SLOW_SPEED)   &mmv MOVE_Y(POINTER_SLOW_SPEED)       &mmv MOVE_X(POINTER_SLOW_SPEED)       &trans    &trans
             &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans   &trans   &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
             >;
